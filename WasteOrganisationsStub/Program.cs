@@ -7,5 +7,6 @@ builder.Services.AddHealthChecks();
 
 var app = builder.Build();
 app.MapHealthChecks("/health");
+app.MapHealthChecks("/health/authorized");
 app.MapEndpoints();
 app.Run();
