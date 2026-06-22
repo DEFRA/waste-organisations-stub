@@ -33,9 +33,6 @@ public static class WebApplicationBuilderExtensions
         });
         builder.Services.TryAddSingleton<HeaderPropagationValues>();
 
-        // Configuring Serilog below wipes out the framework logging
-        // so we don't execute the following when the host is running
-        // within an integration test
         builder.Host.UseSerilog(ConfigureLogging);
     }
 
