@@ -1,8 +1,11 @@
 using WasteOrganisationsStub;
+using WasteOrganisationsStub.Logging;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddLogging(logging => logging.AddConsole().AddDebug());
+builder.Configuration.AddEnvironmentVariables();
+builder.Services.AddCustomTrustStore(); // This must happen before Mongo and Http client connections
+builder.ConfigureLoggingAndTracing();
 builder.Services.AddHealthChecks();
 
 var app = builder.Build();
