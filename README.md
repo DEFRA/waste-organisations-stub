@@ -64,14 +64,15 @@ You can use the CDP Terminal to access the environments' MongoDB.
 
 ### Testing
 
-Run the tests with:
+Build and run the tests with:
 
 Tests run by running a full `WebApplication` backed by [Ephemeral MongoDB](https://github.com/asimmon/ephemeral-mongo).
 Tests do not use mocking of any sort and read and write from the in-memory database.
 
 ```bash
-dotnet test
-````
+dotnet build WasteOrganisationsStub.Test/WasteOrganisationsStub.Test.csproj
+dotnet test --test-modules WasteOrganisationsStub.Test/bin/Debug/net10.0/WasteOrganisationsStub.Test.dll --no-build
+```
 
 ### Running
 
