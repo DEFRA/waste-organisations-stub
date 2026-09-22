@@ -13,6 +13,7 @@ updates:
         applies-to: version-updates
         patterns:
           - 'Microsoft.AspNetCore.Mvc.Testing'
+          - 'Microsoft.Testing.Extensions.CodeCoverage'
           - 'Microsoft.NET.Test.Sdk'
           - 'NSubstitute'
           - 'xunit*'
