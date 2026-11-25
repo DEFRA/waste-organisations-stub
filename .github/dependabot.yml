@@ -49,11 +49,6 @@ updates:
 
   - package-ecosystem: docker-compose
     directory: /
-    ignore:
-      # Keep Mongo on its existing major version while allowing minor and patch updates.
-      - dependency-name: 'mongo'
-        update-types:
-          - 'version-update:semver-major'
     schedule:
       interval: weekly
       time: '10:30'
